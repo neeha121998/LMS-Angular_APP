@@ -1,0 +1,32 @@
+.opacity_block {
+    position: absolute;
+    top: 96px;
+    width: 100%;
+    height: 500px;
+    background: #a594a7a6;
+}
+.icons{
+    position:absolute;
+    top: 45%;
+    left: 20%;
+}
+.icon1{
+    position:absolute;
+    top: 45%;
+    left: 45%;
+}
+.icon2{
+    position:absolute;
+    top: 45%;
+    right: 24%;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #7d289a;
+    border-color: #7d289a;
+ }
+ .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff  !important;
+    background-color: #7d289a;
+    border-color: #7d289a;
+ }

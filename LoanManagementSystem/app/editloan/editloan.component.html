@@ -1,0 +1,110 @@
+<app-header></app-header>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loan Registration Page</title> 
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>$('.datepicker').datepicker()</script>
+</head>
+<body>
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.flaticon.com/icons/png/128/2747/2747449.png" alt=""/>
+                        <h3>REQUEST QUOTE NOW</h3>
+                        <small>Easy to apply for a loan with us,Once you have complete this form.</small>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                        
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Update Your Loan Details</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <b>Enter Loan Amount :</b>
+                                       
+										<div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"> <i class="fas fa-rupee-sign"></i> </span>
+                                             </div>
+                                            <input name="" class="form-control" placeholder="Enter Loan Amount" type="text"  [(ngModel)]="loanDetails.loanAmount" (change)="term()">
+                                        </div>
+
+
+
+                                        <label for="Loan"><b>Choose Type Of Loan :</b></label>
+
+                                        <select name="Loan" class= "form-control"id="Loan" [(ngModel)]="loanDetails.loantype"  disabled >
+                                            <option value="" selected disabled>Type of loan</option>
+                                                
+                                            <!-- <option value="Gold">Gold</option> -->
+                                                <option value="Education">Education</option>
+                                                <option value="Home">Home</option>
+                                                <option value="Start-Up">Start-Up</option>
+  
+                                              </select> 
+                                              <div class="form-group">
+                                                <label for="exampleFormControlFile1"><b>Rate of Intrest for your Loan Type</b></label>
+                                                <input type="text" class="form-control" readonly  [(ngModel)]="loanDetails.rateofinterest" readonly >
+                                                
+                                              </div>
+                                              <!-- <input type="text" readonly [(ngModel)]="rate" > -->
+                                              <label for="Term Of Loan"><b>Choose Term Of Loan :</b></label>
+<br/>
+                                              <select name="Term Of Loan" class= "form-control"id="Term Of Loan"  [(ngModel)]="loanDetails.term"   (change)="term()" >
+                                                <option value="" selected disabled>Term of Loan</option>
+                                                <option value="6">6 Months</option>
+                                                <option value="12">1 Year</option>
+                                                <option value="24">2 Years</option>
+                                                <option value="36">3 Years</option>
+                                                <option value="48">4 Years</option>
+                                              
+                                              </select>
+  </                                          div>
+                                            <div class="col-md-6">
+                                              <div class="form-group">
+                                                <label for="exampleFormControlFile1"><b>Total Interest of your Loan Amount  :</b></label>
+                                                <input type="text" class="form-control" readonly  [(ngModel)]="loanDetails.interest" >
+                                            </div>
+                                              <div class="form-group">
+                                                <label for="exampleFormControlFile1"><b>Total loan amount you must pay  :</b></label>
+
+                                                  <input type="text" class="form-control" readonly [(ngModel)]="loanDetails.fullAmount" >
+                                              </div>
+                                              
+                                              <div class="form-group">
+                                                  <label for="exampleFormControlFile1"><b>Surety :</b></label>
+                                                  <input type="file" class="form-control-file" id="exampleFormControlFile1"  [(ngModel)]="loanDetails.surety" >
+                                                </div>
+                                         
+                                               
+
+                                                <!-- <label for="start"><b>Start date:</b></label>
+<br/>
+                                                <input type="date"class= "form-control" id="start" name="trip-start"
+                                                       value="" -->
+                                                       <!-- min="2018-01-01" max="2021-12-21" [(ngModel)]="loanDetails.loanDate"> -->
+                                       <br/>
+                                       <br/>
+                                     
+
+                                              <a (click)="updateLoan()" class="btn btn-primary" role="button">Update Your Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+			<router-outlet></router-outlet>
+
+
+		</body>
+</html>
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="approved.component.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+</head>
+<body>
+	<div class="small-navbar d-flex justify-content-between">
+		<div class="content">Welcome to Loan Management System</div>
+		<div class="d-flex">
+		  <div class="email_address"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;loan@loan.com</div>
+		  <div class="phone_number"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;+91 98490876543</div>
+		</div>
+	</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Loan Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/app-yettoapprove" routerLinkActive="activate">Pending Loans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/app-approved" routerLinkActive="activate">Approved Loans</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="activate">Logout</a>
+        </li>
+       
+      </ul>
+  
+    </div>
+</nav>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1fvx5etKWwWvy0M-nHpjWtYifIBpnVK9sxwnGzpZtZegkGULj1AH89JW22KFJ2HR0VA&usqp=CAU" width="100%" height="300px">
+<div class="opacity"></div>
+<div class="slider-captions">
+    <!-- slider-captions -->
+    <h2 class="slider-title text-center">User Loans Approved/Rejected</h2>
+    <!-- <small class="small_content">Do'nt have a loan?<br><a class="btn btn-secondary mt-3 " routerLink="/app-loanregistration/{{customerId}}">Apply for New Loan</a></small> -->
+    
+  </div>
+<div class="row container">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+    
+      
+            
+   
+<div>
+    <table class="table table-stripped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">LoanId</th>
+                <th scope="col">LoanType</th>
+                <th scope="col">LoanTerm</th>
+                <th scope="col">Loan Status</th>
+ 
+                <th scope="col">CustomerId</th>
+                <th scope="col">CustomerName</th>
+                <th scope="col">CustomerIncome</th>
+                <th scope="col">Profession Type</th>
+   
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr *ngFor="let loan of loanlist">
+                    <td>{{loan.loanId}}</td>
+                    <td >{{loan.loantype}}</td>
+                    <td>{{loan.term}}</td>
+                    <td>{{loan.status}}</td>
+                   <td>{{loan.customer.customerId}}</td>
+                   <td>{{loan.customer.firstName}}</td>
+             <!-- <td>{{loan.customerdetails.P_TYPE}}</td> -->
+                 
+             <td>{{loan.income}}</td>
+             <td>{{loan.p_type}}</td>
+                   
+                    </tr>
+                    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    
+    <router-outlet></router-outlet>

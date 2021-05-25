@@ -1,0 +1,43 @@
+.small-navbar {
+    background: #7d289a;
+    padding: 8px;
+    color: white;
+  }
+  .email_address {
+    margin-right: 10px;
+  }
+  .phone_number {
+    margin-right: 10px;
+  }
+  .footer {
+    padding: 10px;
+    background: black;
+  }
+  ul.nav-items {
+    color: white;
+    list-style: none;
+  }
+  a.footer_link {
+    text-decoration: none;
+    color: white;
+    /* padding: 20px; */
+    line-height: 2;
+  }
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  ul.navbar-nav {
+    margin-right: 66px;
+  }
+  a.nav-link.activate {
+    background: #7d289a;
+    color: white !important;
+  }  
+  .btn-primary {
+    color: #fff;
+    background-color: #7d289a;
+    border-color: #7d289a;
+}

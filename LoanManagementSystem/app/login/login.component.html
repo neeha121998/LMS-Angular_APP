@@ -1,0 +1,61 @@
+<app-header></app-header>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title> 
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://i.pinimg.com/originals/e5/6b/84/e56b841924ac729935e858cb59535fb7.png" alt=""/>
+                        
+                        <!-- <small>15-Minute Transfer</small> -->
+<h2>Get money right now!
+    </h2>
+<small>FOLLOW THIS EASY STEPS TO GET MONEY WITHIN 15 MINUTES</small>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                      
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Login To Your Account</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                      
+										<div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                             </div>
+                                            <input name="" class="form-control" placeholder="Enter your ID" type="text"  [(ngModel)]="customerId">
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                            </div>
+                                            <input class="form-control" placeholder="Enter Your password" type="password"[(ngModel)]="password">
+                                        </div> 
+                                   
+										<!-- <a routerLink="/register" class="btn btn-primary" role="button">Register</a>&nbsp; &nbsp; &nbsp; &nbsp;  -->
+                                        <a (click)="login()" class="btn btn-primary d-flex justify-content-center" role="button">Login</a>
+                                        
+                                        <small>Don't have an account yet?&nbsp;<a routerLink="/register">Sign Up</a> </small><br>
+                                        <a routerLink="/app-forgetpassword">Forget password?Clickhere</a>
+                                        <!-- <a routerLink="/app-registergenerateid" class="btn btn-primary" role="button">Login</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+			<router-outlet></router-outlet>
+		</body>
+</html>
+
+
